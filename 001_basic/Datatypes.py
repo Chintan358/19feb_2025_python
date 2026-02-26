@@ -32,7 +32,7 @@
 
 # Datatype casting
 
-a = "hello"
-b = int(a)
-print(type(a))
-print(type(b))
+# a = "hello"
+# b = int(a)
+# print(type(a))
+# print(type(b))
