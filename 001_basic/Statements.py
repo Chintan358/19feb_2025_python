@@ -87,19 +87,29 @@ marks  = 50
 #     print(i)
 #     i+=1
 
-choice = 'y'
-while choice!='n':
-    marks = int(input("enter marks : "))
-    if marks>90 and marks<=100:
-        print("Grade A")
-    elif marks>70 and marks<=90:
-        print("Grade B")
-    elif marks>50 and marks<=70:
-        print("Grade C")
-    elif marks>34 and marks<=50:
-        print("Grade D")
-    elif marks>=0 and marks<=34:
-        print("Grade F")
-    else : 
-        print("Invalid marks")
-    choice = input("Do u want to continue ? y or n : ")
+# choice = 'y'
+# while choice!='n':
+#     marks = int(input("enter marks : "))
+#     if marks>90 and marks<=100:
+#         print("Grade A")
+#     elif marks>70 and marks<=90:
+#         print("Grade B")
+#     elif marks>50 and marks<=70:
+#         print("Grade C")
+#     elif marks>34 and marks<=50:
+#         print("Grade D")
+#     elif marks>=0 and marks<=34:
+#         print("Grade F")
+#     else : 
+#         print("Invalid marks")
+#     choice = input("Do u want to continue ? y or n : ")
+
+
+#control : break, continue, pass
+
+# for i in range(20):  
+#     if i==5:
+#         # break
+#         # continue
+#         pass
+#     print(i)
