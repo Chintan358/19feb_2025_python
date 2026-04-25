@@ -1,6 +1,6 @@
-import sqlite3
+# import sqlite3
 
-con = sqlite3.connect("data.db")
+# con = sqlite3.connect("data.db")
 
 # qry = "create table student(id int,name varchar(20),email varchar(20))"
 
@@ -14,5 +14,5 @@ con = sqlite3.connect("data.db")
 # con.commit()
 
 
-data = con.execute("select * from student").fetchall()
-print(data)
+# data = con.execute("select * from student").fetchall()
+# print(data)
