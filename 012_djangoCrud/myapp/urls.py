@@ -3,5 +3,7 @@ from myapp.views import *
 
 urlpatterns = [
     path("",index,name="index"),
-    path("reg",reg,name="reg")
+    path("reg",reg,name="reg"),
+    path("display",display,name="display"),
+    path("delete",delete_students,name="delete")
 ]
