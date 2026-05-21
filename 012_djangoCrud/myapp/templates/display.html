@@ -47,7 +47,7 @@
                             <td>{{st.email}}</td>
                             <td>{{st.age}}</td>
                             <td><a href="{%url 'delete'%}?id={{st.id}}" class="btn btn-danger">Delete</a></td>
-                            <td><a href="" class="btn btn-primary">Update</a></td>
+                            <td><a href="{%url 'edit'%}?id={{st.id}}" class="btn btn-primary">Update</a></td>
                         </tr>
                         {%endfor%}
 
