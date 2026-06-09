@@ -12,7 +12,7 @@
 
         $(document).ready(function () {
 
-            // alert("hELLLO")
+            countries()
         })
 
         const test = () => {
@@ -23,6 +23,61 @@
             })
         }
 
+        const search = (q) => {
+
+            $.get('search', { q }, function (rt) {
+                $("#result").html(rt)
+            })
+
+        }
+
+
+        const countries = () => {
+
+            $.get('countries', {}, function (rt) {
+
+                var options = "<option value='0'>---select country---</option>"
+                rt.data.map(ele => {
+
+                    options += `<option value="${ele.id}">${ele.name}</option>`
+
+                })
+                $("#country").html(options)
+            })
+        }
+
+        const states = (cid) => {
+
+
+            $.get('states', { cid }, function (rt) {
+
+                var options = "<option value='0'>---select states---</option>"
+                rt.data.map(ele => {
+
+                    options += `<option value="${ele.id}">${ele.name}</option>`
+
+                })
+                $("#state").html(options)
+            })
+
+        }
+
+
+        const city = (sid) => {
+
+
+            $.get('cities', { sid }, function (rt) {
+
+                var options = "<option value='0'>---select city---</option>"
+                rt.data.map(ele => {
+
+                    options += `<option value="${ele.id}">${ele.name}</option>`
+
+                })
+                $("#city").html(options)
+            })
+
+        }
 
     </script>
 </head>
@@ -33,6 +88,33 @@
     <input type="text" id="q">
     <button onclick="test()">Click me</button>
     <div id="display"></div>
+
+    <br>
+    <hr>
+    <br>
+
+
+    <input type="text" onkeyup="search(value)">
+    <div id="result"></div>
+
+
+    <br>
+    <hr>
+    <br>
+
+
+    <select name="country" id="country" onchange="states(value)">
+        <option value="0">---select country---</option>
+    </select>
+
+    <select name="state" id="state" onchange="city(value)">
+        <option value="0">---select state---</option>
+    </select>
+
+    <select name="city" id="city">
+        <option value="0">---select city---</option>
+    </select>
+
 </body>
 
 </html>
